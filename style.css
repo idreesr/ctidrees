@@ -532,6 +532,7 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
+	background-color: #07889b;
 	clear: both;
 	display: block;
 	float: left;
@@ -541,8 +542,9 @@ a:active {
 .main-navigation ul {
 	display: none;
 	list-style: none;
-	margin: 0;
+	margin: 2em 0;
 	padding-left: 0;
+	text-transform: uppercase;
 }
 
 .main-navigation li {
@@ -558,8 +560,11 @@ a:active {
 }
 
 .main-navigation ul ul {
+	background-color: #07889b;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
+	margin: 0;
+	padding: 10px;
 	position: absolute;
 	top: 1.5em;
 	left: -999em;
@@ -575,8 +580,13 @@ a:active {
 	width: 200px;
 }
 
-/* This keeps the font size of sub menu items consistent with main menu items */
+/* This keeps the font size of sub menu items smaller than the main menu items */
 .main-navigation ul ul li {
+	font-size: 0.8em;
+}
+
+/* This keeps sub sub menu items the same font size as sub menu items */
+.main-navigation ul ul ul li {
 	font-size: 1em;
 }
 
