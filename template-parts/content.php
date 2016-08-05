@@ -28,7 +28,8 @@
 
 	<div class="entry-content">
 		<?php
-			the_content( sprintf(
+			/* changed this to show excerpts of the posts */
+			the_excerpt( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'ct' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
