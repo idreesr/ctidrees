@@ -267,8 +267,8 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	color: #18121e;
+	font-family: "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -281,6 +281,7 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: 'Old Standard TT', serif;
 }
 
 p {
@@ -412,6 +413,90 @@ table {
 	width: 100%;
 }
 
+/* changing the site branding banner */
+.site-branding {
+	text-align: center;
+}
+
+/* do not want the link color to change when visited */
+.site-branding a:visited {
+	color: #fff;
+}
+
+/* increasing site title size */
+.site-title {
+	font-size: 2.5em;
+}
+
+/* changing the header image */
+header#masthead {
+	background-image: url("img/abstract.jpg");
+	padding-bottom: 1em;
+}
+
+/* changing color of main area background and border radius */
+#main.site-main {
+	background-color: #984b43;
+	border-radius: 1em 5em 2em 0.4em;
+	padding: 1em;
+}
+
+.cat-links,
+.comments-link,
+.edit-link,
+.tags-links {
+	font-size: 0.8em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+/* Styling the footer */
+#colophon.site-footer {
+	background-color: #0f5959;
+	border-top: 0.1em solid #adbdc1;
+    clear: both;
+    float: left;
+    margin-top: 4em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    text-align: center;
+    width: 100%;
+}
+
+.logged-in-as {
+	font-size: 0.9em;
+	padding-left: 1em;
+}
+
+/* makes the labels in the comments section take up whole line */
+#commentform label {
+	display: block;
+}
+
+.comment-metadata {
+	font-size: 0.9em;
+}
+
+/* stylizing comment reply link */
+a.comment-reply-link {
+	background-color: #0f5959;
+	padding: 0.25em 0.5em;
+	text-transform: uppercase;
+}
+
+/* stylizing the next/previous post navigation */
+.nav-previous a, 
+.nav-next a {
+	background-color: #0f5959;
+    color: #fff;
+    display: inline-block;
+    letter-spacing: 0.05em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 0.25em 0.75em;
+    text-transform: uppercase;
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -419,24 +504,19 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
+	border: none;
+	background: #0f5959;
+	color: #fff;
 	font-size: 12px;
-	font-size: 0.75rem;
+	font-size: 0.80rem;
 	line-height: 1;
 	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
 
@@ -448,7 +528,6 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
 	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -501,6 +580,12 @@ textarea {
 	width: 100%;
 }
 
+/* Centering comment post button */
+.form-submit {
+	text-align: center;
+	width: 100%;
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -508,17 +593,19 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #fff;
+	text-decoration: none;
 }
 
+/* changed the color of a visited link */
 a:visited {
-	color: purple;
+	color: #adbdc1;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #159b8d;
 }
 
 a:focus {
@@ -530,14 +617,24 @@ a:active {
 	outline: 0;
 }
 
+.cat-links a,
+.comments-link a,
+.edit-link a,
+.tags-links a {
+	text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
+/* The color scheme for my theme was inspired by this color palette: https://color.adobe.com/The-Color-of-Traffic-color-theme-2589902/ */
 .main-navigation {
-	background-color: #07889b;
+	background-color: #0F5959;
 	clear: both;
 	display: block;
 	float: left;
+	font-family: 'Old Standard TT', serif;
 	width: 100%;
 }
 
@@ -563,7 +660,7 @@ a:active {
 }
 
 .main-navigation ul ul {
-	background-color: #07889b;
+	background-color: #0F5959;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	margin: 0;
@@ -782,15 +879,61 @@ a:active {
 	display: inline;
 }
 
+/* Changing the padding of post content and how much
+width it takes up */
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+	padding: 1em;
+	width: 75%;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+/* floating main content to left and setting its width */
+#primary {
+	float: left;
+	padding: 1.5em;
+	width: 75%;
+}
+
+/* making meta data font smaller */
+.entry-meta {
+	font-size: 0.8em;
+	padding-left: 1em;
+}
+
+/* makes post/page content into columned area */
+.entry-content {
+	column-count: 2;
+	column-gap: 2em;
+	    -moz-column-count: 2;
+		-moz-column-gap: 2em;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 2em;
+}
+
+/* fixed margin of first paragraph so columns are at same height */
+.entry-content p:first-of-type {
+	margin-top: 0;
+}
+
+/* Styling the page/post title */
+.entry-title {
+	background-color: #eac67a;
+	border-radius: 0.25em 1em;
+	padding: 0.25em;
+	width: 50%;
+}
+
+/* floats the sidebar to right of page */
+#secondary {
+	float: right;
+	width: 20%;
 }
 
 /*--------------------------------------------------------------

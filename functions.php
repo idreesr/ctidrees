@@ -111,6 +111,8 @@ function ct_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	/* Enqueuing the Google font stylesheet */
+	wp_enqueue_style( 'ct-google-fonts', 'https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700,400italic', false ); 
 }
 add_action( 'wp_enqueue_scripts', 'ct_scripts' );
 
