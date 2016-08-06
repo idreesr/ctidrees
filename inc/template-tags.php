@@ -120,3 +120,56 @@ function ct_category_transient_flusher() {
 }
 add_action( 'edit_category', 'ct_category_transient_flusher' );
 add_action( 'save_post',     'ct_category_transient_flusher' );
+
+if ( ! function_exists( 'ct_posts_navigation' ) ) :
+/**
+ * Display navigation to next/previous set of posts when applicable.
+ *
+ */
+function ct_posts_navigation() {
+	// Don't print empty markup if there's only one page.
+	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+		return;
+	}
+	?>
+	<nav class="navigation posts-navigation" role="navigation">
+		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'customtheme' ); ?></h2>
+		<div class="nav-links">
+
+			
+			<div class="nav-previous"><?php next_posts_link(__( '&larr; Older posts', 'customtheme' ) ); ?></div>
+			
+			
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'customtheme' )  ); ?></div>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}
+endif;
+
+if ( ! function_exists( 'ct_post_navigation' ) ) :
+/**
+ * Display navigation to next/previous post when applicable.
+ *
+ */
+function ct_post_navigation() {
+	// Don't print empty markup if there's nowhere to navigate.
+	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false );
+
+	if ( ! $next && ! $previous ) {
+		return;
+	}
+	?>
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'customtheme' ); ?></h2>
+		<div class="nav-links">
+			<?php
+				previous_post_link( '<div class="nav-previous">%link</div>', '&larr; %title' );
+				next_post_link( '<div class="nav-next">%link</div>', '%title &rarr;' );
+			?>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}
+endif;
