@@ -459,8 +459,31 @@ header#masthead {
     margin-top: 4em;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
-    text-align: center;
     width: 100%;
+}
+
+#footer-widgets {
+	width: 100%;
+}
+
+/* Stylizes footer widget appearance */
+#footer-widgets ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0.25em;
+}
+
+/* Displays footer widgets in a block instead of stacked */
+#colophon .widget {
+	float: left;
+	padding: 1.5em;
+	width: 33%;
+}
+
+/* centers the site information in the footer area */
+.site-info {
+	clear: both;
+	text-align: center;
 }
 
 .logged-in-as {
@@ -755,6 +778,28 @@ a:active {
 	width: 50%;
 }
 
+/* Stopping footer menu from getting between floating elements */
+#foot-menu {
+	clear: both;
+	text-align: center;
+}
+
+/* Gets rid of default bulletin style of footer menu */
+#foot-menu ul {
+	list-style-type: none;
+}
+
+/* Changes the footer menu into a block */
+#foot-menu ul li {
+    display: inline-block;
+}
+
+#foot-menu ul li a {
+    display: block;
+    padding: 0.25em;
+    text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -853,6 +898,20 @@ a:active {
 /* Make sure select elements fit in widgets. */
 .widget select {
 	max-width: 100%;
+}
+
+h2.widget-title {
+	border-bottom: 0.05em solid #adbdc1;
+	text-align: center;
+}
+
+/* Stylizing the widgets in the sidebar */
+.widget-area {
+	background-color: #eac67a;
+	border-radius: 0.75em 2em;
+	margin-right: 1.5em;
+	margin-top: 1.5em;
+	padding: 1em;
 }
 
 /*--------------------------------------------------------------

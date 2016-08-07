@@ -47,6 +47,9 @@ function ct_setup() {
 		'primary' => esc_html__( 'Primary', 'ct' ),
 	) );
 
+	// This registers a footer menu
+	register_nav_menus( array( 'secondary'=>'Footer Menu' ) );
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -81,7 +84,7 @@ function ct_content_width() {
 add_action( 'after_setup_theme', 'ct_content_width', 0 );
 
 /**
- * Register widget area.
+ * Register widget area (including sidebar widgets and footer widgets).
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -93,6 +96,24 @@ function ct_widgets_init() {
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	// this registers one footer widget area
+	register_sidebar( array(
+		'name'          => esc_html__( 'First Footer Widget', 'ct' ),
+		'id'            => 'footer-sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="foot-widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	// this registerrs a second footer widget area
+	register_sidebar( array(
+		'name'          => esc_html__( 'Second Footer Widget', 'ct' ),
+		'id'            => 'footer-sidebar-2',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="foot-widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
