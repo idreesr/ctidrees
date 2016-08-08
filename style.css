@@ -747,6 +747,11 @@ a:active {
 .main-navigation.toggled ul {
 	display: block;
 }
+/* Increasing font size of hamburger menu icon */
+.menu-toggle {
+	font-size: 1em;
+	text-transform: uppercase;
+}
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
@@ -1162,10 +1167,6 @@ object {
 	#colophon .widget:last-child {
 		margin-right: 2%;
 	}
-	/* trying to make the navigation items take up less space */
-	.main-navigation li {
-		padding: 0.2em 0.4em;
-	}
 	/* makes content display in single column */
 	.entry-content {
 		-webkit-column-count: 1;
@@ -1174,7 +1175,7 @@ object {
 	}
 }
 /* No larger than mobile media query */
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 599px) {
 	/* Setting width to size of containing element ensures the widgets stack */
 	#colophon .widget {
 		margin: 0 0 1em;
@@ -1215,6 +1216,26 @@ object {
 	/* changing width so sidebar is not that squished */
 	#secondary {
 		width: 70%;
+	}
+
+	header#masthead {
+		padding-bottom: 0;
+	}
+	/* making hamburger menu font size smaller */
+	.main-navigation ul {
+		font-size: 0.8em;
+	}
+	/* keeps sub menu items font size same as main menu font */
+	.main-navigation ul ul {
+		font-size: 1em;
+	}
+	/* keeps font size of sub items in hamburger menu consistent */
+	.main-navigation ul ul ul {
+		font-size: 1em;
+	}
+	/* Makes hamburger menu items stack */
+	#site-navigation ul li {
+		float: none;
 	}
 }
 
