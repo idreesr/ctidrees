@@ -574,6 +574,7 @@ textarea {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 3px;
+	width: 90%;
 }
 
 select {
@@ -945,7 +946,7 @@ width it takes up */
 .entry-summary {
 	margin: 1.5em 0 0;
 	padding: 1em;
-	width: 75%;
+	width: 80%;
 }
 
 .page-links {
@@ -1110,3 +1111,110 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+/* No larger than 1024px wide media query */
+@media only screen and (max-width: 1024px) { 
+	/* stylizing content container, footer, and header text to be responsive */
+	#colophon,
+	.site-branding, .container {
+		float: none;
+		margin: auto;
+		width: 100%;
+	}
+	/* stops content on page/post from taking up full width of the page */
+	#primary {
+		float: none;
+		margin: auto;
+		width: 80%;
+	}
+	/* stylizing sidebar to be responsive (to stack) */
+	#secondary {
+		float: none;
+		margin: auto;
+		width: 30%;
+	}
+	/* trying to make the navigation items take up less space */
+	.main-navigation li {
+		padding: 0.2em 0.4em;
+	}
+}
+/* No larger than tablet media query */
+@media only screen and (max-width: 750px) {
+	/* stylizing sidebar to be responsive */
+	#secondary {
+		float: none;
+		margin: auto;
+		width: 40%;
+	}
+
+	#primary {
+		width: 100%;
+	}
+	/* setting width to size of containing element ensures the widgets stack */
+	#colophon .widget {
+		margin: 0 2% 1em;
+		width: 100%;
+	}
+
+	#colophon .widget:last-child {
+		margin-right: 2%;
+	}
+	/* trying to make the navigation items take up less space */
+	.main-navigation li {
+		padding: 0.2em 0.4em;
+	}
+	/* makes content display in single column */
+	.entry-content {
+		-webkit-column-count: 1;
+		   -moz-column-count: 1;
+		        column-count: 1;
+	}
+}
+/* No larger than mobile media query */
+@media only screen and (max-width: 580px) {
+	/* Setting width to size of containing element ensures the widgets stack */
+	#colophon .widget {
+		margin: 0 0 1em;
+		width: 100%;
+		padding-left: 1em;
+	}
+
+	#colophon .widget:last-child {
+		margin-right: 0%;
+	}
+	/* Stylizes the footer menu to stack */
+	#foot-menu ul li {
+		float: none;
+		width: 80%;
+	}
+	/* Stylizes copyright and credits to take up full space */
+	.site-info {
+		padding: 0.5em;
+		width: 100%;
+	}
+	/* Stopping post comments from indenting too far */
+	ol.comment-list {
+		padding-left: 1em;
+		margin-left: 0;
+	}
+	/* trying to keep these navigations from touching in smaller screens */
+	.comment-navigation .nav-previous,
+	.posts-navigation .nav-previous,
+	.post-navigation .nav-previous {
+		width: 45%;
+	}
+	/* trying to keep these navigations from touching in smaller screens */
+	.comment-navigation .nav-next,
+	.posts-navigation .nav-next,
+	.post-navigation .nav-next {
+		width: 45%;
+	}
+	/* changing width so sidebar is not that squished */
+	#secondary {
+		width: 70%;
+	}
+}
+

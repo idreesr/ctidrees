@@ -161,3 +161,6 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// Call the file that controls the theme options
+require get_template_directory() . '/inc/options.php';
