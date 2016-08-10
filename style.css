@@ -995,6 +995,16 @@ width it takes up */
 	width: 50%;
 }
 
+/* don't want page/post title links to change color when visited */
+h2.entry-title a:visited {
+	color: #fff;
+}
+
+/* still want a hover color for these title links */
+h2.entry-title a:hover {
+	color: #159b8d;
+}
+
 /* floats the sidebar to right of page */
 #secondary {
 	float: right;

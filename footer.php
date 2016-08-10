@@ -8,9 +8,21 @@
  *
  * @package CustomTheme
  */
-
+	
+	/* The following code checks which option is selected in the options page */
+	$options = get_option('ct_options_settings');
+	/* this if statement checks if the 'Hide widgets'
+	box is checked */
+	if ( isset($options['ct_checkbox_field']) =='on' ) {
+		/* if it is checked, then it hides the footer widgets */
+		?> <style type="text/css">
+				#footer-widgets {
+					display: none;
+				}
+			</style>
+	<?php
+	}
 ?>
-
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">

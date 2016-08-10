@@ -45,4 +45,10 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
+	<!-- calls ct_options_fonts() function -->
+	<?php
+		ct_options_fonts();
+
+	?>
+
 	<div id="content" class="site-content">

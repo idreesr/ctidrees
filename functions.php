@@ -164,3 +164,54 @@ require get_template_directory() . '/inc/jetpack.php';
 
 // Call the file that controls the theme options
 require get_template_directory() . '/inc/options.php';
+
+/**
+ * Changes the main font face on the site based off what is selected in the Options page
+ */
+function ct_options_fonts() {
+	/* The following code checks which option is selected in the options page */
+	$options = get_option( 'ct_options_settings' );
+	if ( isset($options['ct_select_field']) ) {
+		$selected = $options['ct_select_field'];
+
+		if ($selected == 1) {
+			?> <style type="text/css">
+					body,
+					button,
+					input,
+					select,
+					textarea {
+						font-family: "Arial Narrow", Arial, sans-serif;
+					}
+				</style>
+		<?php
+		}
+
+		elseif ($selected == 2) {
+			?> <style type="text/css">
+					body,
+					button,
+					input,
+					select,
+					textarea {
+						font-family: Geneva, Tahoma, Verdana, sans-serif;
+					}
+				</style>
+		<?php
+		}
+
+		elseif ($selected == 3) {
+			?> <style type="text/css">
+					body,
+					button,
+					input,
+					select,
+					textarea {
+						font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+						font-size: 1.05em;
+					}
+				</style>
+		<?php
+		}
+	}
+}
