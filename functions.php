@@ -171,10 +171,14 @@ require get_template_directory() . '/inc/options.php';
 function ct_options_fonts() {
 	/* The following code checks which option is selected in the options page */
 	$options = get_option( 'ct_options_settings' );
-	if ( isset($options['ct_select_field']) ) {
-		$selected = $options['ct_select_field'];
 
+	if ( isset($options['ct_select_field']) ) {
+		/* $selected refers to the item in the select box that is selected */
+		$selected = $options['ct_select_field'];
+		/* this if statement checks if the Arial Narrow item (1) is selected */
 		if ($selected == 1) {
+			/* if it is selected, then it changes the main font face
+			on the site to Arial Narrow */
 			?> <style type="text/css">
 					body,
 					button,
@@ -186,8 +190,10 @@ function ct_options_fonts() {
 				</style>
 		<?php
 		}
-
+		/* this elseif statement checks if the Geneva item (2) is selected */
 		elseif ($selected == 2) {
+			/* if it is selected, then it changes the main font face
+			on the site to Geneva */
 			?> <style type="text/css">
 					body,
 					button,
@@ -199,8 +205,10 @@ function ct_options_fonts() {
 				</style>
 		<?php
 		}
-
+		/* this elseif statement checks if the Garamond item (3) is selected */
 		elseif ($selected == 3) {
+			/* if it is selected, then it changes the main font face
+			on the site to Garamond */
 			?> <style type="text/css">
 					body,
 					button,
@@ -213,5 +221,68 @@ function ct_options_fonts() {
 				</style>
 		<?php
 		}
+	}
+}
+
+/**
+ * Changes the background color of the sidebar and the page/post titles
+ * based off what is selected in the Options page
+ */
+function ct_option_colors() {
+	/* The following code checks which option is selected in the options page */
+	$options = get_option('ct_options_settings');
+	
+	if ( isset($options['ct_radio_field']) ) {
+		$selected = $options['ct_radio_field'];
+		/* this if statement checks if the radio button
+		'light blue' is selected */
+		if ($selected == 2) {
+			/* if it is selected, then it changes the background
+			color of page/post titles and the sidebar to a light blue */
+			?> <style type="text/css">
+					.widget-area {
+						background-color: #bfd4d9;
+					}
+
+					.entry-title {
+						background-color: #bfd4d9;
+					}
+				</style>
+			<?php	
+		}
+
+		/* this elseif statement checks if the radio button
+		'no color' is selected */
+		elseif ($selected == 3 ) {
+			/* if it is selected, then it changes the background
+			color of page/post titles and the sidebar to transparent */
+			?> <style type="text/css">
+					.widget-area {
+						background-color: transparent;
+					}
+
+					.entry-title {
+						background-color: transparent;
+					}
+				</style>
+		<?php
+		}
+		
+		/* this code runs if the radio button
+		'default' is selected */
+		else {
+			/* it then changes the background color of page/post
+			titles and the sidebar to the original color of a warm yellow */
+			?> <style type="text/css">
+					.widget-area {
+						background-color: #eac67a;
+					}
+
+					.entry-title {
+						background-color: #eac67a;
+					}
+				</style>
+		<?php
+		}	
 	}
 }

@@ -24,7 +24,7 @@ function ct_settings_init() {
 	// adding radio buttons
 	add_settings_field( 
 		'ct_radio_field', 
-		'Choose a custom sidebar and page heading color', 
+		'Choose a custom sidebar and page/post title color', 
 		'ct_radio_field_render', 
 		'theme_options', 
 		'ct_options_page_section'  
