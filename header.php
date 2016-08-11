@@ -25,7 +25,18 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ct' ); ?></a>
-
+	<?php
+		// adding code for the announcement option on the options page 
+		$options = get_option( 'ct_options_settings' );
+		if ( isset($options['ct_text_field']) ) {
+			$text = $options['ct_text_field'];
+			// this if statement checks to see that something has been entered
+			// into the text box and if it has, it displays that text on the page
+			if ($text != "") {
+				echo $options['ct_text_field'] .'<br />';
+			}
+		}
+	?>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 				<!-- Made site title consisent for all pages -->

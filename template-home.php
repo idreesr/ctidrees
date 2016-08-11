@@ -17,16 +17,16 @@ get_header(); ?>
 		      <div class="flexslider">
 		        <ul class="slides">
 		          <li>
-			    	    <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+			    	    <img src="<?php echo get_template_directory_uri() ?> /img/Sketch1.jpg" />
 			    		</li>
 			    		<li>
-			    	    <img src="images/kitchen_adventurer_lemon.jpg" />
+			    	    <img src="<?php echo get_template_directory_uri() ?> /img/Sketch2.jpg" />
 			    		</li>
 			    		<li>
-			    	    <img src="images/kitchen_adventurer_donut.jpg" />
+			    	    <img src="<?php echo get_template_directory_uri() ?> /img/Sketch3.jpg" />
 			    		</li>
 			    		<li>
-			    	    <img src="images/kitchen_adventurer_caramel.jpg" />
+			    	    <img src="<?php echo get_template_directory_uri() ?> /img/Sketch4.jpg" />
 			    		</li>
 		        </ul>
 		      </div>
