@@ -71,6 +71,21 @@ function ct_setup() {
 endif;
 add_action( 'after_setup_theme', 'ct_setup' );
 
+/* This function creates a custom post type called ct_featured */
+function create_post_type() {
+	register_post_type( 'ct_featured',
+	    array(
+	      'labels' => array(
+	        'name' => __( 'Featured' ),
+	        'singular_name' => __( 'Featured' )
+	      ),
+	      'public' => true,
+	      'has_archive' => true,
+	    )
+	  );
+}
+add_action( 'init', 'create_post_type' );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *

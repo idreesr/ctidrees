@@ -1,36 +1,14 @@
 === CustomTheme ===
 
-Contributors: automattic
-Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
+This custom theme has been built upon the starter theme underscores.
 
-Requires at least: 4.0
-Tested up to: 4.5.3
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+== Instructions for Use ==
 
-A starter theme called CustomTheme, or underscores.
+Options Page
+This theme comes with an Options Page located under 'Appearance -> Theme Options' in the WordPress Dashboard. This page allows the user to customize the theme through a selection of settings. Simply select an option of your choice from the ones available and click 'Save Changes' to observe the change on your live site.
 
-== Description ==
-
-Hi. I'm a starter theme called CustomTheme, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
-
-== Installation ==
-
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
-
-== Frequently Asked Questions ==
-
-= Does this theme support any plugins? =
-
-CustomTheme includes support for Infinite Scroll in Jetpack.
-
-== Changelog ==
-
-= 1.0 - May 12 2015 =
-* Initial release
+Enhanced Customization
+This theme comes with a custom home page that includes an image slider. To use this custom page, create a new page and apply the 'Custom Home Page' template to it before setting that page as the new homepage. To change the posts that appear in the image slider, simply tag your four desired posts with the tag 'Featured' (make sure that it has the slug 'featured') and make sure to set a featured image for each as well. The featured images will appear on the slider.
 
 == Credits ==
 

@@ -748,7 +748,9 @@ a:active {
 	display: block;
 }
 /* Increasing font size of hamburger menu icon */
+/* Also making font face consistent with rest of menu */
 .menu-toggle {
+	font-family: "Old Standard TT", serif;
 	font-size: 1em;
 	text-transform: uppercase;
 }
@@ -992,7 +994,7 @@ width it takes up */
 	background-color: #eac67a;
 	border-radius: 0.25em 1em;
 	padding: 0.25em;
-	width: 50%;
+	width: 60%;
 }
 
 /* don't want page/post title links to change color when visited */
