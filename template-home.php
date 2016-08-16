@@ -52,4 +52,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
+/* calling the function ct_option_title_colors() here */
+ct_option_title_colors();
+
 get_footer();

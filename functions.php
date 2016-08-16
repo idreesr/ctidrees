@@ -311,3 +311,54 @@ function ct_option_colors() {
 		}	
 	}
 }
+
+/**
+ * Changes the background color of the page/post titles
+ * based off what is selected in the Options page
+ */
+function ct_option_title_colors() {
+	/* The following code checks which option is selected in the options page */
+	$options = get_option('ct_options_settings');
+	
+	if ( isset($options['ct_radio_field']) ) {
+		$selected = $options['ct_radio_field'];
+		/* this if statement checks if the radio button
+		'light blue' is selected */
+		if ($selected == 2) {
+			/* if it is selected, then it changes the background
+			color of page/post titles to a light blue */
+			?> <style type="text/css">
+					.entry-title {
+						background-color: #bfd4d9;
+					}
+				</style>
+			<?php	
+		}
+
+		/* this elseif statement checks if the radio button
+		'no color' is selected */
+		elseif ($selected == 3 ) {
+			/* if it is selected, then it changes the background
+			color of page/post titles to transparent */
+			?> <style type="text/css">
+					.entry-title {
+						background-color: transparent;
+					}
+				</style>
+		<?php
+		}
+		
+		/* this code runs if the radio button
+		'default' is selected */
+		else {
+			/* it then changes the background color of page/post
+			titles to the original color of a warm yellow */
+			?> <style type="text/css">
+					.entry-title {
+						background-color: #eac67a;
+					}
+				</style>
+		<?php
+		}	
+	}
+}
